@@ -18,7 +18,7 @@ export const registerSchema = z
         .regex(/[a-z]/, { error: 'Password must include at least one lowercase letter.' })
         .regex(/[A-Z]/, { error: 'Password must include at least one uppercase letter.' })
         .regex(/[0-9]/, { error: 'Password must include at least one number.' })
-        .regex(/[!@#$%^&*()_+\-=\[\]{}|;:'",.<>/?`~]/, {
+        .regex(/[!@#$%^&*()_+\-=[\]{}|;:'",.<>/?`~]/, {
           error: 'Password must include at least one special character'
         }),
       confirmPassword: z.string(),
